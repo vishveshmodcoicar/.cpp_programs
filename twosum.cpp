@@ -1,0 +1,28 @@
+/*Author : Vishvesh Paresh Modcoicar
+  Date : 19/09/2024
+*/
+  
+#include<vector>
+#include <iostream>
+#include <unordered_map>
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+    int n=nums.size();
+    vector<int> result;
+
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(nums[i]+nums[j]==target){
+                result.push_back(i);
+                result.push_back(j);
+                return result;
+            }
+        }
+    }
+
+    cout<<"Not Found"<<endl;
+    return result;
+    }
+};
